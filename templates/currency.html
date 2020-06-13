@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator</title>
+</head>
+
+<body>
+
+<form method="post" action="/convert/">
+  <div class="container">
+    <select name="Currency" id="Curr">
+        {% for item in items %}
+            <option value = {{item}}>{{item}}</option>
+        {% endfor %}
+
+    </select>
+    <label for="Hajsy"><b>Hajsy</b></label>
+    <input type="number" step = "0.01" name="Hajsy" required>
+    <button type="submit">Liczaj</button>
+  </div>
+</form>
+</body>
+</html>
